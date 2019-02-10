@@ -1,0 +1,16 @@
+{
+  "journeys": [
+    {
+      "from": "BTN",
+      "to": "CBG"
+    },
+    {
+      "from": "LBG",
+      "to": "CBG"
+    },
+    {
+      "from": "KGX",
+      "to": "CBG"
+    }
+  ]
+}
