@@ -1,0 +1,101 @@
+{
+  "journeys": [
+    {
+      "lastChecked": "2019-02-10T16:18:00+00:00",
+      "services": [
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0c0MDEwOS8yMDE5LTAyLTEw",
+          "due": "16:09",
+          "expected": "16:10",
+          "platform": "9",
+          "operator": "Great Northern",
+          "origin": "Cambridge Station"
+        },
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0c0MDAzMS8yMDE5LTAyLTEw",
+          "due": "16:31",
+          "expected": "On time",
+          "operator": "Thameslink",
+          "origin": "Cambridge Station"
+        },
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0c0MDExMS8yMDE5LTAyLTEw",
+          "due": "17:10",
+          "expected": "On time",
+          "operator": "Great Northern",
+          "origin": "Kings Lynn"
+        },
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0c0MDEyNS8yMDE5LTAyLTEw",
+          "due": "17:21",
+          "expected": "On time",
+          "operator": "Great Northern",
+          "origin": "Cambridge Station"
+        },
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0c0MDAzNS8yMDE5LTAyLTEw",
+          "due": "17:31",
+          "expected": "On time",
+          "operator": "Thameslink",
+          "origin": "Cambridge Station"
+        }
+      ],
+      "from": "KGX",
+      "to": "CBG",
+      "index": 1
+    },
+    {
+      "lastChecked": "2019-02-10T16:18:00+00:00",
+      "services": [
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0c0MDExMC8yMDE5LTAyLTEw",
+          "due": "15:58",
+          "expected": "On time",
+          "platform": "1",
+          "operator": "Great Northern",
+          "origin": "London Kings Cross"
+        },
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0c0MDAyMS8yMDE5LTAyLTEw",
+          "due": "16:48",
+          "expected": "On time",
+          "platform": "7",
+          "operator": "Thameslink",
+          "origin": "London Kings Cross"
+        },
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0c0MDExMi8yMDE5LTAyLTEw",
+          "due": "16:58",
+          "expected": "On time",
+          "platform": "1",
+          "operator": "Great Northern",
+          "origin": "London Kings Cross"
+        },
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0cxNTg4OS8yMDE5LTAyLTEw",
+          "due": "17:32",
+          "expected": "On time",
+          "operator": "Great Northern",
+          "origin": "London Kings Cross"
+        },
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0c0MDAyNS8yMDE5LTAyLTEw",
+          "due": "17:48",
+          "expected": "On time",
+          "operator": "Thameslink",
+          "origin": "London Kings Cross"
+        },
+        {
+          "id": "L2NhbGxpbmdQYXR0ZXJuL0cxNjU4Ni8yMDE5LTAyLTEw",
+          "due": "17:58",
+          "expected": "On time",
+          "operator": "Great Northern",
+          "origin": "London Kings Cross"
+        }
+      ],
+      "from": "KGX",
+      "to": "CBG",
+      "index": 2
+    }
+  ]
+}

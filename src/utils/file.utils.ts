@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { LoggerUtils } from './logger.utils';
 
 export class FileUtils {
     static getFileList(params: {
@@ -103,7 +102,6 @@ export class FileUtils {
     }
 
     static writeFileSync(fileName: string, content: string) {
-        LoggerUtils.info({origin: 'FileUtils', message: `Creating ${fileName}`});
         FileUtils.createFolderStructureIfNeeded(fileName);
         fs.writeFileSync(fileName, content);
     }
@@ -165,8 +163,6 @@ export class FileUtils {
     }
 
     static deleteFileSync(fileName: string) {
-        console.log('Deleting ' + fileName);
-        
         fs.unlinkSync(fileName);
     }
 
@@ -176,9 +172,6 @@ export class FileUtils {
      * @param sub (used for logging purpose only)
      */
     static deleteFolderRecursiveSync(path: string, sub: boolean = false) {
-        if (!sub) {
-            LoggerUtils.info({origin: 'FileUtils', message: `Deleting ${path}`});
-        }
         if (fs.existsSync(path)) {
             fs.readdirSync(path).forEach((file) => {
                 const curPath = path + "/" + file;

@@ -3,7 +3,9 @@ import path from 'path';
 import { LoggerUtils } from "../utils/logger.utils";
 
 export interface Settings {
-    journeys?: {from: string; to: string;}[]
+    journeys?: {from: string; to: string;}[],
+    from?: string;
+    to?: string;
 }
 export class SettingsService {
     static async saveJourney(from: string, to: string) {
@@ -29,5 +31,18 @@ export class SettingsService {
             settings = await FileUtils.readJsonFile(path.resolve(__dirname, '../temp','settings.json'));
         }
         return settings;
+    }
+
+    static async setFrom(from: string) {
+        FileUtils.createFolderIfNotExistsSync(path.resolve(__dirname, '../temp'));
+        let settings: Settings = await SettingsService.getSettings();
+        settings.from = from;
+        await FileUtils.writeFileSync(path.resolve(__dirname, '../temp','settings.json'), JSON.stringify(settings, null, 2));
+    }
+    static async setTo(to: string) {
+        FileUtils.createFolderIfNotExistsSync(path.resolve(__dirname, '../temp'));
+        let settings: Settings = await SettingsService.getSettings();
+        settings.to = to;
+        await FileUtils.writeFileSync(path.resolve(__dirname, '../temp','settings.json'), JSON.stringify(settings, null, 2));
     }
 }

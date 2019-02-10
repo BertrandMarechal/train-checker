@@ -7,6 +7,9 @@ export interface TrainlineResponse {
 
 export interface StationStatus {
     lastChecked: Date,
+    from: string,
+    to: string,
+    index: number;
     services: {
         id: string;
         due: string
@@ -17,20 +20,22 @@ export interface StationStatus {
         origin: string
     }[];
 }
+export interface CallingPoint {
+    station: string;
+    isOrigin: boolean;
+    isDestination: boolean;
+    estimatedAt: TrainStatus;
+    scheduledAt: string;
+    isSelected: boolean;
+    isTrainHere: boolean;
+    hasDeparted: boolean;
+}
 
 export interface JourneyDetails {
     checkedAt: string;
     operator: string;
     scheduledAt: string;
-    callingPoints: {
-        station: string;
-        isOrigin: boolean;
-        isDestination: boolean;
-        estimatedAt: TrainStatus;
-        scheduledAt: string;
-        isSelected: boolean;
-        isTrainHere: boolean;
-    }[];
+    callingPoints: CallingPoint[];
 }
 
 export interface Location {
