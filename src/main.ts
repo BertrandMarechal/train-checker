@@ -175,14 +175,13 @@ async function getTrainDetails(indexes: string) {
                 callingPointStatus = colors.white(callingPointInfo);
             }
             if (callingPoint.estimatedAt !== 'On time') {
-                callingPointStatus += colors.yellow(` ${callingPoint.isDestination ? 'arr' : 'dep'}. ${callingPoint.estimatedAt}`);
+                callingPointStatus += colors.yellow(` est. ${callingPoint.estimatedAt}`);
             }
             if (callingPoint.isTrainHere && callingPoint.hasDeparted) {
                 callingPointStatus += '\n    ' + train;
             }
             return callingPointStatus;
         }).join('\n');
-        // console.log(JSON.stringify(journeyDetails.callingPoints, null, 2))
         console.log(status);
     } catch (error) {
         return null;
@@ -210,7 +209,7 @@ async function main () {
         await status('departures');
         await status('arrivals');
         console.log('');
-        console.log('To have details on one train, please call traun-status <journey index>-<train index>');
+        console.log('To have details on one train, please call "train-status" <journey index>-<train index>');
     } else if (args[0] === 'train-status') {
         await getTrainDetails(args[1]);
     } else {
